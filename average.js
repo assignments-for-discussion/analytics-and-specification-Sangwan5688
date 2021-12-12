@@ -1,6 +1,7 @@
 
 function average(numbers) {
-  return numbers.reduce((p, c)=> p + c, 0) / numbers.length;
+  const numbers2 = numbers.filter(value => !Number.isNaN(value));
+  return numbers2.reduce((p, c)=> p + c, 0) / numbers2.length;
 }
 
 module.exports = {average};

@@ -18,7 +18,10 @@ function filterOutliers(numbers) {
 function average(numbers) {
   const nonNanNumbers = numbers.filter(value => !Number.isNaN(value));
   const filteredNonNanNumbers = filterOutliers(nonNanNumbers);
-  return filteredNonNanNumbers.reduce((p, c)=> p + c, 0) / filteredNonNanNumbers.length;
+  return (
+      filteredNonNanNumbers.reduce((p, c) => p + c, 0) /
+      filteredNonNanNumbers.length
+    );
 }
 
 module.exports = {average};
